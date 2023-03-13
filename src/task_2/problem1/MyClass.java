@@ -1,4 +1,4 @@
-package task_2;
+package task_2.problem1;
 
 public class MyClass implements  Interface_A{
     @Override
