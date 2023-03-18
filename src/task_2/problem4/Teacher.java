@@ -6,27 +6,28 @@ import java.util.List;
 
 public class Teacher extends Person {
     private int numCourses = 0;
-    private String[] courses = new String[5];
-    private List<String> list =new ArrayList<>(Arrays.asList(courses));
+
 
     public Teacher(String name, String address) {
         super(name, address);
+        listCourses=new ArrayList<>(5);
+        listGrades=new ArrayList<>();
     }
 
     public boolean addCourse(String course) {
 
-        if (list.contains(course)) {
+        if (listCourses.contains(course)) {
             System.out.println("Course already exists");
             return false;
         }
-        list.add(course);
+        listCourses.add(course);
         numCourses++;
         System.out.println("Course was added");
         return true;
     }
 
     public boolean removeCourse(String course) {
-        if (!list.contains(course)) {
+        if (!listCourses.contains(course)) {
             System.out.println("Course not found");
             return false;
         }

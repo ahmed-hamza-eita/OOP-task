@@ -5,22 +5,20 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Student extends Person {
-    private String[] courses = new String[30];
-    private List<String> listCourses = new ArrayList<>(Arrays.asList(courses));
-    private Integer[] grades = {};
-    private List<Integer> listGrades = new ArrayList<Integer>(Arrays.asList(grades));
+
 
 
     public Student(String name, String address) {
         super(name, address);
+        listCourses=new ArrayList<>(30);
+        listGrades=new ArrayList<>();
     }
 
     public void addCourseGrade(String course, int grade) {
         listCourses.add(course);
         listGrades.add(grade);
 
-
-    }
+     }
 
     public void printCoursesTaken() {
         System.out.print("Courses taken: ");
